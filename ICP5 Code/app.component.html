@@ -1,0 +1,34 @@
+<div class = centered>
+  <div class = title>
+    <!-- Importing title from components -->
+<h1>{{title}}</h1>
+  </div>
+  <!-- creating a button and a text box, after user inputs a new item, it is sent to the addtodo function, and the text box is cleared -->
+  <div class = button>
+<input type = "text" #newitem />
+<button (click) = "addtodo(newitem.value); newitem.value=''">Add something to the list!</button>
+    </div>
+  <!-- table where list elements are added - first division is for the headings -->
+<table>
+  <div class = headings>
+  <tr>
+  <th><strong>Task Name</strong></th>
+  <th><strong> &nbsp;&nbsp; Completed</strong></th>
+    <th><strong>&nbsp;&nbsp; Remove</strong></th>
+    <td><strong>&nbsp;&nbsp; Countdown</strong></td>
+  </tr>
+    <!-- this division is for displaying the list element data, nbsp ar used for spacing issues (aesthetic). The
+    list elements are displayed via for loop, and the remove button is present for each element. Tick displays
+    the predetermined time countdown-->
+  </div>
+  <div class = listitems>
+  <tr *ngFor="let newtodo of todolist">
+    <td>{{newtodo.label}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td>{{newtodo.completed ? '&#10003;' : '&#10005;'}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <button (click) = "remove()"> Remove</button>
+    <td>&nbsp;&nbsp;{{tick}}</td>
+  </tr>
+  </div>
+</table>
+</div>
+

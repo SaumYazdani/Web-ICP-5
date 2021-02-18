@@ -1,0 +1,20 @@
+.headings{
+ font-family: Monospace, "Lucida Console";
+}
+.centered{
+  margin: auto;
+  width: 30%;
+  border: 5px solid darkred;
+}
+.title{
+  font-family: fantasy,"copperplate";
+  margin:auto;
+  width: 35%;
+  color: darkred;
+}
+.button{
+  text-align: center;
+}
+.listitems{
+  text-align: left;
+}
