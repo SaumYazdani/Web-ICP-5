@@ -1,1 +1,1 @@
-# Web-ICP-5
+In this ICP we were asked to create a basic todo list, and also a countdown clock. I attempted to combine the 2 assignments into one project (todo list with timer). I did so using Angular, HTML, CSS, TS.
